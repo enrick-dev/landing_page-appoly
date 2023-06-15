@@ -60,6 +60,8 @@ body
       display: flex
       justify-content: space-between
       color: $white
+      @include mobile
+        display: none
       >div:first-child
         display: flex
         gap: 4.7rem
@@ -176,8 +178,9 @@ body
     position: relative
     overflow: hidden
     @include mobile
+      position: unset
       flex-direction: column
-    
+      justify-content: center    
     .conteudoHeader
       width: 57rem
       height: 43.2rem
@@ -263,6 +266,11 @@ body
         width: 37.5rem
         height: 31.8rem
         left: 16px
+      @include mobile
+        height: 100%
+        align-items: flex-start
+        left: 16px
+      
 
       >div
         width: 100%
@@ -275,15 +283,25 @@ body
           height: calc( 100% + 80px )
         @include tablet
           height: calc( 100% + 32px )
+        @include mobile
+          height: calc( 31.8rem + 32px )
   
     >figure
       height: 100%
+      @include mobile
+        height: 50%
+        align-self: flex-end
+
       >img
         width: 100%
         height: 90%
         margin-left: 50px
         object-fit: contain
         object-position: left
+        @include mobile
+          height: 100%
+          object-position: center
+          margin-left: 0px
 
 
 
@@ -297,6 +315,8 @@ main>section:first-child
   @include tinyDesktop
     height: 84.8rem
     grid-template-columns: 5% 1fr 5%
+  @include mobile
+    height: 108.7rem
   
 
   #contentAbout
@@ -325,17 +345,23 @@ main>section:first-child
         font-size: 1.6rem
         line-height: 24px
         color: $gray
+        @include mobile
+          width: 100%
     
     >div:last-child
-      widows: 100%
+      width: 100%
       display: flex
       align-items: center
       justify-content: space-between
+      @include mobile
+        flex-direction: column
       >figure
         flex: 1
         >img
           width: 100%
           max-width: 38.6rem
+          @include mobile
+            max-height: 35.9rem
 
 
       .containerCardsAbout
@@ -356,10 +382,14 @@ main>section:first-child
           overflow: hidden
           @include tinyDesktop
             height: 11rem
+          @include mobile
+            grid-template-columns: 1.9rem 6.1rem 1fr 1.6rem
+            grid-template-rows: 1.8rem 1fr 1rem
           >figure
             grid-column: 2
             grid-row: 2
             height: 80%
+              
 
           >div:last-child
             grid-column: 3
@@ -377,7 +407,6 @@ main>section:first-child
               font-size: 1.6rem
               line-height: 24px
               color: $gray
-              @include smallDesktop
               
               
 
@@ -801,12 +830,20 @@ main>section:nth-child(5)
               text-transform: uppercase
               line-height: 47.3px
               color: $black
+              @include smallDesktop
+                font-size: 2.6rem
+              @include tinyDesktop
+                font-size: 2rem
             >h3
               font-size: 2rem
               font-weight: 600
               text-transform: uppercase
               line-height: 30px
               color: $gray
+              @include smallDesktop
+                font-size: 1.8rem
+              @include tinyDesktop
+                font-size: 1.6rem
           
           >p
             width: 90%
@@ -818,7 +855,9 @@ main>section:nth-child(5)
             width: 90%
             display: flex
             justify-content: space-evenly
-            
+
+            >figure
+              cursor: pointer
             >figure:not(figure:last-child)::after
               content: ''
               display: inline-block
@@ -826,6 +865,8 @@ main>section:nth-child(5)
               height: 100%
               background-color: $black
               margin-left: 3.1rem
+              @include smallDesktop
+                margin-left: 2.1rem
 
 
 

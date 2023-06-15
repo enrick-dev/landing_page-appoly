@@ -49,6 +49,12 @@ body {
   color: #fff;
 }
 
+@media screen and (max-width: 700px) {
+  #home > header .contactNav {
+    display: none;
+  }
+}
+
 #home > header .contactNav > div:first-child {
   display: flex;
   gap: 4.7rem;
@@ -194,7 +200,9 @@ body {
 
 @media screen and (max-width: 700px) {
   #home > section {
+    position: unset;
     flex-direction: column;
+    justify-content: center;
   }
 }
 
@@ -339,6 +347,14 @@ body {
   }
 }
 
+@media screen and (max-width: 700px) {
+  #home > section .bordaQuadrada {
+    height: 100%;
+    align-items: flex-start;
+    left: 16px;
+  }
+}
+
 #home > section .bordaQuadrada > div {
   width: 100%;
   height: calc( 100% + 100px);
@@ -364,8 +380,21 @@ body {
   }
 }
 
+@media screen and (max-width: 700px) {
+  #home > section .bordaQuadrada > div {
+    height: calc( 31.8rem + 32px);
+  }
+}
+
 #home > section > figure {
   height: 100%;
+}
+
+@media screen and (max-width: 700px) {
+  #home > section > figure {
+    height: 50%;
+    align-self: flex-end;
+  }
 }
 
 #home > section > figure > img {
@@ -374,6 +403,14 @@ body {
   margin-left: 50px;
   object-fit: contain;
   object-position: left;
+}
+
+@media screen and (max-width: 700px) {
+  #home > section > figure > img {
+    height: 100%;
+    object-position: center;
+    margin-left: 0px;
+  }
 }
 
 main > section:first-child {
@@ -387,6 +424,12 @@ main > section:first-child {
   main > section:first-child {
     height: 84.8rem;
     grid-template-columns: 5% 1fr 5%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  main > section:first-child {
+    height: 108.7rem;
   }
 }
 
@@ -423,11 +466,23 @@ main > section:first-child #contentAbout > div:first-child > p {
   color: #6C6C72;
 }
 
+@media screen and (max-width: 700px) {
+  main > section:first-child #contentAbout > div:first-child > p {
+    width: 100%;
+  }
+}
+
 main > section:first-child #contentAbout > div:last-child {
-  widows: 100%;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+@media screen and (max-width: 700px) {
+  main > section:first-child #contentAbout > div:last-child {
+    flex-direction: column;
+  }
 }
 
 main > section:first-child #contentAbout > div:last-child > figure {
@@ -437,6 +492,12 @@ main > section:first-child #contentAbout > div:last-child > figure {
 main > section:first-child #contentAbout > div:last-child > figure > img {
   width: 100%;
   max-width: 38.6rem;
+}
+
+@media screen and (max-width: 700px) {
+  main > section:first-child #contentAbout > div:last-child > figure > img {
+    max-height: 35.9rem;
+  }
 }
 
 main > section:first-child #contentAbout > div:last-child .containerCardsAbout {
@@ -466,6 +527,13 @@ main > section:first-child #contentAbout > div:last-child .containerCardsAbout >
 @media screen and (max-width: 1015px) {
   main > section:first-child #contentAbout > div:last-child .containerCardsAbout > div {
     height: 11rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  main > section:first-child #contentAbout > div:last-child .containerCardsAbout > div {
+    grid-template-columns: 1.9rem 6.1rem 1fr 1.6rem;
+    grid-template-rows: 1.8rem 1fr 1rem;
   }
 }
 
@@ -1073,12 +1141,36 @@ main > section:nth-child(5) .contentTeam > div:last-child > figure > figcaption 
   color: #232233;
 }
 
+@media screen and (max-width: 1310px) {
+  main > section:nth-child(5) .contentTeam > div:last-child > figure > figcaption > div:first-child > h2 {
+    font-size: 2.6rem;
+  }
+}
+
+@media screen and (max-width: 1015px) {
+  main > section:nth-child(5) .contentTeam > div:last-child > figure > figcaption > div:first-child > h2 {
+    font-size: 2rem;
+  }
+}
+
 main > section:nth-child(5) .contentTeam > div:last-child > figure > figcaption > div:first-child > h3 {
   font-size: 2rem;
   font-weight: 600;
   text-transform: uppercase;
   line-height: 30px;
   color: #6C6C72;
+}
+
+@media screen and (max-width: 1310px) {
+  main > section:nth-child(5) .contentTeam > div:last-child > figure > figcaption > div:first-child > h3 {
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 1015px) {
+  main > section:nth-child(5) .contentTeam > div:last-child > figure > figcaption > div:first-child > h3 {
+    font-size: 1.6rem;
+  }
 }
 
 main > section:nth-child(5) .contentTeam > div:last-child > figure > figcaption > p {
@@ -1094,6 +1186,10 @@ main > section:nth-child(5) .contentTeam > div:last-child > figure > figcaption 
   justify-content: space-evenly;
 }
 
+main > section:nth-child(5) .contentTeam > div:last-child > figure > figcaption > div:last-child > figure {
+  cursor: pointer;
+}
+
 main > section:nth-child(5) .contentTeam > div:last-child > figure > figcaption > div:last-child > figure:not(figure:last-child)::after {
   content: '';
   display: inline-block;
@@ -1101,4 +1197,10 @@ main > section:nth-child(5) .contentTeam > div:last-child > figure > figcaption 
   height: 100%;
   background-color: #232233;
   margin-left: 3.1rem;
+}
+
+@media screen and (max-width: 1310px) {
+  main > section:nth-child(5) .contentTeam > div:last-child > figure > figcaption > div:last-child > figure:not(figure:last-child)::after {
+    margin-left: 2.1rem;
+  }
 }
