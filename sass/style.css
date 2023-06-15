@@ -3,6 +3,10 @@ html {
   font-size: 62.5%;
 }
 
+body {
+  font-family: 'Josefin Sans';
+}
+
 #home {
   height: 1024px;
   background-image: url("../assets/imgs/backgrounds/background_header.png");
@@ -14,22 +18,36 @@ html {
 #home > header {
   grid-column: 2;
   margin-top: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 #home > header .contactNav {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  color: #fff;
 }
 
-#home > header .contactNav > div {
+#home > header .contactNav > div:first-child {
   display: flex;
   gap: 4.7rem;
 }
 
-#home > header .contactNav > div > figure {
+#home > header .contactNav > div:first-child > figure {
   display: flex;
+  align-items: center;
   gap: 2.8rem;
+}
+
+#home > header .contactNav > div:first-child > figure > figcaption {
+  font-size: 1.6rem;
+}
+
+#home > header .contactNav > div:last-child {
+  display: flex;
+  gap: 3rem;
 }
 
 #home > header > nav {
@@ -38,6 +56,76 @@ html {
   align-items: center;
   justify-content: space-between;
   background-color: #fff;
+  border-radius: .5rem;
+}
+
+#home > header > nav #logoHeader {
+  width: 20rem;
+  height: calc( 100% + 3rem);
+  background-color: #fff;
+  border-radius: .5rem;
+  display: grid;
+  place-items: center;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+}
+
+#home > header > nav > ul {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  font-size: 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+#home > header > nav > ul a {
+  text-decoration: none;
+  color: #232233;
+}
+
+#home > header > nav > ul a:not(ul:first-child > li:first-child > a, ul:last-child > li:last-child > a)::after {
+  content: '';
+  display: block;
+  width: 0%;
+  height: 1px;
+  background-color: #232233;
+  transition: 0.4s ease;
+}
+
+#home > header > nav > ul a:not(ul:first-child > li:first-child > a, ul:last-child > li:last-child > a):hover::after {
+  width: 100%;
+}
+
+#home > header > nav > ul:first-child > li:first-child {
+  margin-left: 5.2rem;
+}
+
+#home > header > nav > ul:first-child > li:first-child > a {
+  color: #5956E9;
+}
+
+#home > header > nav > ul:first-child > li:first-child > a::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #5956E9;
+}
+
+#home > header > nav > ul:last-child > li:last-child > a {
+  width: 15.8rem;
+  height: 5rem;
+  margin-right: .5rem;
+  color: #fff;
+  background-color: #5956E9;
+  border-radius: .5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#home > header > nav > ul:last-child > li:last-child > a:hover {
+  background-color: #6663e2;
 }
 
 #home > section {
