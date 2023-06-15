@@ -85,6 +85,14 @@ body
       justify-content: space-between
       background-color: $white
       border-radius: .5rem
+      @include mobile
+        height: 4rem
+
+      .menuMobile
+        display: none
+        margin-left: 1rem
+        @include tablet
+          display: flex
 
 
       #logoHeader
@@ -95,10 +103,20 @@ body
         display: grid
         place-items: center
         box-shadow: $effect-box-shadown
+        @include mobile
+          width: 10rem
+          height: calc( 100% + 1rem )
+          
         >img
           width: 16.7rem
           height: 2.6rem
+          @include mobile
+            width: 7.9rem
+            height: 1.2rem
 
+      >ul:first-child
+        @include tablet
+          display: none
       >ul
         display: flex
         align-items: center
@@ -156,6 +174,10 @@ body
         display: flex
         align-items: center
         justify-content: center
+        @include mobile
+          width: 7.6rem
+          height: 3.4rem
+          font-size: 1rem
         &:hover
           background-color: #6663e2
 
@@ -178,9 +200,9 @@ body
     position: relative
     overflow: hidden
     @include mobile
-      position: unset
       flex-direction: column
-      justify-content: center    
+      justify-content: space-around 
+      gap: 4rem   
     .conteudoHeader
       width: 57rem
       height: 43.2rem
@@ -269,7 +291,6 @@ body
       @include mobile
         height: 100%
         align-items: flex-start
-        left: 16px
       
 
       >div
@@ -422,6 +443,8 @@ main>section:nth-child(2)
   background-position: bottom
   @include tablet
     height: 136.6rem
+  @include mobile
+    height: 223rem
 
 
   #contentFeatures
@@ -436,6 +459,8 @@ main>section:nth-child(2)
       flex-direction: column
       align-items: center
       gap: 1.8rem
+      @include mobile
+        margin-bottom: 3.2rem
       >h3
         font-size: 3.12rem
         font-weight: bold
@@ -447,6 +472,8 @@ main>section:nth-child(2)
         font-size: 1.6rem
         line-height: 24px
         color: $white
+        @include mobile
+          width: 90%
 
     >div:last-child 
       display: grid
@@ -459,6 +486,12 @@ main>section:nth-child(2)
         gap: 1.8rem
       @include tablet
         grid-template-rows: 17.1rem 17.1rem 5rem 17.1rem
+      @include mobile
+        grid-template-columns: none
+        grid-template-rows: none
+        gap: 4rem
+        
+
       
       
       >figure
@@ -469,6 +502,9 @@ main>section:nth-child(2)
         gap: 2.2rem
         @include smallDesktop
           gap: 1rem
+        @include mobile
+          width: 22.3rem
+          height: 17.1rem
         >img
           width: 50px
           @include smallDesktop
@@ -501,35 +537,75 @@ main>section:nth-child(2)
         grid-column: 3
         grid-row: 1
         text-align: center
+        @include mobile
+          grid-column: 1
+          grid-row: 1
+          text-align: center
+
       >figure:nth-child(2)
         grid-column: 2
         grid-row: 2
         align-items: flex-end
         text-align: end
+        @include mobile
+          grid-column: 1
+          grid-row: 2
+          text-align: center
+          align-items: center
+
       >figure:nth-child(3)
         grid-column: 4
         grid-row: 2
         align-items: flex-start
         text-align: start
+        @include mobile
+          grid-column: 1
+          grid-row: 5
+          text-align: center
+          align-items: center
+
       >figure:nth-child(4)
         grid-column: 2
         grid-row: 4
         align-items: flex-end
         text-align: end
+        @include mobile
+          grid-column: 1
+          grid-row: 3
+          text-align: center
+          align-items: center
+
       >figure:nth-child(5)
         grid-column: 4
         grid-row: 4
         align-items: flex-start
         text-align: start
+        @include mobile
+          grid-column: 1
+          grid-row: 6
+          text-align: center
+          align-items: center
+
       >figure:nth-child(6)
         grid-column: 3
         grid-row: 5
         text-align: center
+        @include mobile
+          grid-column: 1
+          grid-row: 7
+          text-align: center
+
       >figure:nth-child(7)
         min-width: 21.4rem
         grid-column: 3
         grid-row: 2/5
         border-radius: 4rem
+        @include mobile
+          grid-column: 1
+          grid-row: 4
+          width: 21.4rem
+          height: 46.8rem
+          justify-self: center
         >img
           object-fit: cover
           object-position: top
@@ -547,6 +623,9 @@ main>section:nth-child(3)
   grid-template-columns: 8% 1fr 8%
   @include tinyDesktop
     grid-template-columns: 4% 1fr 4%
+  @include mobile
+    height: 92.3rem
+    margin: 6rem 0rem
 
   
   .contentInterfaceAndDownload
@@ -561,13 +640,16 @@ main>section:nth-child(3)
     >div:last-child
       height: 50.6rem
       display: flex
-      
+      @include mobile
+        flex-direction: column
+        height: 100%
 
       >div:first-child
         flex: 1
         display: flex
         flex-direction: column
         justify-content: space-between
+        @include mobile
 
         >h3
           font-size: 3.12rem
@@ -584,6 +666,9 @@ main>section:nth-child(3)
           display: flex
           align-items: center
           gap: 1.4rem
+          @include mobile  
+            width: 100%
+            justify-content: space-between
           >img
             width: 14.9rem
             height: 4.7rem
@@ -592,6 +677,9 @@ main>section:nth-child(3)
         >div:last-child
           display: flex
           gap: 3rem
+          @include mobile  
+            width: 100%
+            justify-content: space-between
           >figure
             width: 17rem
             height: 17.6rem
@@ -703,6 +791,11 @@ main>section:nth-child(4)
         width: 57rem
         height: 23.1rem
         transform: translateY(6rem)
+      @include mobile
+        width: 34.3rem
+        height: 15rem
+        transform: translateY(0rem)
+
       >img
         width: 100%
         height: 100%
@@ -717,6 +810,9 @@ main>section:nth-child(5)
   grid-template-columns: 8% 1fr 8%
   @include smallDesktop
     grid-template-columns: 4% 1fr 4%
+
+  @include mobile
+    display: none
 
   .contentTeam
     grid-column: 2
