@@ -623,6 +623,7 @@ main > section:nth-child(2) #contentFeatures > div:last-child > figure:nth-child
 }
 
 main > section:nth-child(2) #contentFeatures > div:last-child > figure:nth-child(7) > img {
+  margin: 1.3rem;
   width: auto;
   border-radius: 4rem;
   box-shadow: 4rem 4rem 10rem rgba(24, 48, 63, 0.5);
