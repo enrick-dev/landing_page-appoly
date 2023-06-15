@@ -375,3 +375,123 @@ body {
   object-fit: contain;
   object-position: left;
 }
+
+main > section:first-child {
+  height: 101.4rem;
+  display: grid;
+  place-items: center;
+  grid-template-columns: 12% 1fr 12%;
+}
+
+@media screen and (max-width: 1015px) {
+  main > section:first-child {
+    height: 84.8rem;
+    grid-template-columns: 5% 1fr 5%;
+  }
+}
+
+main > section:first-child #contentAbout {
+  width: 100%;
+  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6rem;
+}
+
+main > section:first-child #contentAbout > div:first-child {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main > section:first-child #contentAbout > div:first-child > h3 {
+  font-size: 3.12rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 47.3px;
+  color: #232233;
+}
+
+main > section:first-child #contentAbout > div:first-child > p {
+  width: 60rem;
+  font-size: 1.6rem;
+  line-height: 24px;
+  color: #6C6C72;
+}
+
+main > section:first-child #contentAbout > div:last-child {
+  widows: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+main > section:first-child #contentAbout > div:last-child > figure {
+  flex: 1;
+}
+
+main > section:first-child #contentAbout > div:last-child > figure > img {
+  width: 100%;
+  max-width: 38.6rem;
+}
+
+main > section:first-child #contentAbout > div:last-child .containerCardsAbout {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+@media screen and (max-width: 1015px) {
+  main > section:first-child #contentAbout > div:last-child .containerCardsAbout {
+    flex: 1.5;
+    gap: 2rem;
+  }
+}
+
+main > section:first-child #contentAbout > div:last-child .containerCardsAbout > div {
+  height: 16rem;
+  display: grid;
+  grid-template-columns: 1.8rem 4.1rem 1fr 2rem;
+  grid-template-rows: 3rem 1fr 2.1rem;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 1015px) {
+  main > section:first-child #contentAbout > div:last-child .containerCardsAbout > div {
+    height: 11rem;
+  }
+}
+
+main > section:first-child #contentAbout > div:last-child .containerCardsAbout > div > figure {
+  grid-column: 2;
+  grid-row: 2;
+  height: 80%;
+}
+
+main > section:first-child #contentAbout > div:last-child .containerCardsAbout > div > div:last-child {
+  grid-column: 3;
+  grid-row: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+main > section:first-child #contentAbout > div:last-child .containerCardsAbout > div > div:last-child > h4 {
+  font-size: 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 30px;
+  color: #232233;
+}
+
+main > section:first-child #contentAbout > div:last-child .containerCardsAbout > div > div:last-child > p {
+  font-size: 1.6rem;
+  line-height: 24px;
+  color: #6C6C72;
+}
