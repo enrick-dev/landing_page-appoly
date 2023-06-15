@@ -507,6 +507,12 @@ main > section:nth-child(2) {
   background-position: bottom;
 }
 
+@media screen and (max-width: 865px) {
+  main > section:nth-child(2) {
+    height: 136.6rem;
+  }
+}
+
 main > section:nth-child(2) #contentFeatures {
   display: flex;
   flex-direction: column;
@@ -541,7 +547,22 @@ main > section:nth-child(2) #contentFeatures > div:first-child > p {
 main > section:nth-child(2) #contentFeatures > div:last-child {
   display: grid;
   grid-template-columns: 10% 1fr 1fr 1fr 10%;
-  grid-template-rows: 23.1rem 23.1rem 23.1rem 23.1rem 23.1rem;
+  grid-template-rows: 23.1rem 23.1rem 23.1rem 23.1rem;
+  gap: 2rem;
+}
+
+@media screen and (max-width: 1310px) {
+  main > section:nth-child(2) #contentFeatures > div:last-child {
+    grid-template-columns: 5% 1fr 1fr 1fr 5%;
+    grid-template-rows: 17.1rem 17.1rem 17.1rem 17.1rem;
+    gap: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 865px) {
+  main > section:nth-child(2) #contentFeatures > div:last-child {
+    grid-template-rows: 17.1rem 17.1rem 5rem 17.1rem;
+  }
 }
 
 main > section:nth-child(2) #contentFeatures > div:last-child > figure {
@@ -552,14 +573,27 @@ main > section:nth-child(2) #contentFeatures > div:last-child > figure {
   gap: 2.2rem;
 }
 
+@media screen and (max-width: 1310px) {
+  main > section:nth-child(2) #contentFeatures > div:last-child > figure {
+    gap: 1rem;
+  }
+}
+
 main > section:nth-child(2) #contentFeatures > div:last-child > figure > img {
   width: 50px;
+  width: 40px;
 }
 
 main > section:nth-child(2) #contentFeatures > div:last-child > figure > figcaption {
   display: flex;
   flex-direction: column;
   gap: 1.8rem;
+}
+
+@media screen and (max-width: 1310px) {
+  main > section:nth-child(2) #contentFeatures > div:last-child > figure > figcaption {
+    gap: 1rem;
+  }
 }
 
 main > section:nth-child(2) #contentFeatures > div:last-child > figure > figcaption > h3 {
@@ -570,10 +604,23 @@ main > section:nth-child(2) #contentFeatures > div:last-child > figure > figcapt
   color: #fff;
 }
 
+@media screen and (max-width: 1310px) {
+  main > section:nth-child(2) #contentFeatures > div:last-child > figure > figcaption > h3 {
+    font-size: 2rem;
+    line-height: 30px;
+  }
+}
+
 main > section:nth-child(2) #contentFeatures > div:last-child > figure > figcaption > p {
   font-size: 1.6rem;
   line-height: 24px;
   color: #fff;
+}
+
+@media screen and (max-width: 1310px) {
+  main > section:nth-child(2) #contentFeatures > div:last-child > figure > figcaption > p {
+    font-size: 1.6rem;
+  }
 }
 
 main > section:nth-child(2) #contentFeatures > div:last-child > figure:nth-child(1) {
@@ -612,19 +659,152 @@ main > section:nth-child(2) #contentFeatures > div:last-child > figure:nth-child
 
 main > section:nth-child(2) #contentFeatures > div:last-child > figure:nth-child(6) {
   grid-column: 3;
-  grid-row: 6;
+  grid-row: 5;
+  text-align: center;
 }
 
 main > section:nth-child(2) #contentFeatures > div:last-child > figure:nth-child(7) {
+  min-width: 21.4rem;
   grid-column: 3;
-  grid-row: 2/4;
-  justify-content: normal;
+  grid-row: 2/5;
   border-radius: 4rem;
 }
 
 main > section:nth-child(2) #contentFeatures > div:last-child > figure:nth-child(7) > img {
-  margin: 1.3rem;
-  width: auto;
+  object-fit: cover;
+  object-position: top;
+  width: 100%;
+  height: 100%;
   border-radius: 4rem;
   box-shadow: 4rem 4rem 10rem rgba(24, 48, 63, 0.5);
+}
+
+main > section:nth-child(3) {
+  height: 65.4rem;
+  display: grid;
+  grid-template-columns: 8% 1fr 8%;
+}
+
+@media screen and (max-width: 1015px) {
+  main > section:nth-child(3) {
+    grid-template-columns: 4% 1fr 4%;
+  }
+}
+
+main > section:nth-child(3) .contentInterfaceAndDownload {
+  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main > section:nth-child(3) .contentInterfaceAndDownload > div:first-child {
+  display: none;
+}
+
+main > section:nth-child(3) .contentInterfaceAndDownload > div:last-child {
+  height: 50.6rem;
+  display: flex;
+}
+
+main > section:nth-child(3) .contentInterfaceAndDownload > div:last-child > div:first-child {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+main > section:nth-child(3) .contentInterfaceAndDownload > div:last-child > div:first-child > h3 {
+  font-size: 3.12rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 47.3px;
+  color: #232233;
+}
+
+main > section:nth-child(3) .contentInterfaceAndDownload > div:last-child > div:first-child > p {
+  font-size: 1.6rem;
+  line-height: 24px;
+  color: #6C6C72;
+}
+
+main > section:nth-child(3) .contentInterfaceAndDownload > div:last-child > div:first-child > figure {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+}
+
+main > section:nth-child(3) .contentInterfaceAndDownload > div:last-child > div:first-child > figure > img {
+  width: 14.9rem;
+  height: 4.7rem;
+  cursor: pointer;
+}
+
+main > section:nth-child(3) .contentInterfaceAndDownload > div:last-child > div:first-child > div:last-child {
+  display: flex;
+  gap: 3rem;
+}
+
+main > section:nth-child(3) .contentInterfaceAndDownload > div:last-child > div:first-child > div:last-child > figure {
+  width: 17rem;
+  height: 17.6rem;
+  background-color: #5851EA;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.8rem;
+  color: #fff;
+}
+
+@media screen and (max-width: 1015px) {
+  main > section:nth-child(3) .contentInterfaceAndDownload > div:last-child > div:first-child > div:last-child > figure {
+    width: 9.6rem;
+    height: 10rem;
+    gap: .8rem;
+  }
+}
+
+main > section:nth-child(3) .contentInterfaceAndDownload > div:last-child > div:first-child > div:last-child > figure > img {
+  width: 3.5rem;
+}
+
+@media screen and (max-width: 1015px) {
+  main > section:nth-child(3) .contentInterfaceAndDownload > div:last-child > div:first-child > div:last-child > figure > img {
+    width: 1.8rem;
+  }
+}
+
+main > section:nth-child(3) .contentInterfaceAndDownload > div:last-child > div:first-child > div:last-child > figure > p:nth-child(2) {
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: auto;
+}
+
+@media screen and (max-width: 1015px) {
+  main > section:nth-child(3) .contentInterfaceAndDownload > div:last-child > div:first-child > div:last-child > figure {
+    font-size: 2rem;
+  }
+}
+
+main > section:nth-child(3) .contentInterfaceAndDownload > div:last-child > div:first-child > div:last-child > figure > p:last-child {
+  font-size: 2rem;
+}
+
+@media screen and (max-width: 1015px) {
+  main > section:nth-child(3) .contentInterfaceAndDownload > div:last-child > div:first-child > div:last-child > figure > p:last-child {
+    font-size: 1.6rem;
+  }
+}
+
+main > section:nth-child(3) .contentInterfaceAndDownload > div:last-child > figure {
+  flex: 1;
+}
+
+main > section:nth-child(3) .contentInterfaceAndDownload > div:last-child > figure > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }

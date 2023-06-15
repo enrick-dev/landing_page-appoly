@@ -391,6 +391,9 @@ main>section:nth-child(2)
   background-image: url('../assets/imgs/backgrounds/background_header.png')
   background-size: cover
   background-position: bottom
+  @include tablet
+    height: 136.6rem
+
 
   #contentFeatures
     display: flex
@@ -419,7 +422,15 @@ main>section:nth-child(2)
     >div:last-child 
       display: grid
       grid-template-columns: 10% 1fr 1fr 1fr 10%
-      grid-template-rows: 23.1rem 23.1rem 23.1rem 23.1rem 23.1rem
+      grid-template-rows: 23.1rem 23.1rem 23.1rem 23.1rem 
+      gap: 2rem
+      @include smallDesktop
+        grid-template-columns: 5% 1fr 1fr 1fr 5%
+        grid-template-rows: 17.1rem 17.1rem 17.1rem 17.1rem
+        gap: 1.8rem
+      @include tablet
+        grid-template-rows: 17.1rem 17.1rem 5rem 17.1rem
+      
       
       >figure
         display: flex
@@ -427,22 +438,33 @@ main>section:nth-child(2)
         justify-content: center
         flex-direction: column
         gap: 2.2rem
+        @include smallDesktop
+          gap: 1rem
         >img
           width: 50px
+          @include smallDesktop
+          width: 40px
         >figcaption
           display: flex
           flex-direction: column
           gap: 1.8rem
+          @include smallDesktop
+            gap: 1rem
           >h3
             font-size: 2.5rem
             font-weight: 600
             text-transform: uppercase
             line-height: 37.5px
             color: $white
+            @include smallDesktop
+              font-size: 2rem
+              line-height: 30px
           >p
             font-size: 1.6rem
             line-height: 24px
             color: $white
+            @include smallDesktop
+              font-size: 1.6rem
 
 
 
@@ -472,18 +494,114 @@ main>section:nth-child(2)
         text-align: start
       >figure:nth-child(6)
         grid-column: 3
-        grid-row: 6
+        grid-row: 5
+        text-align: center
       >figure:nth-child(7)
+        min-width: 21.4rem
         grid-column: 3
-        grid-row: 2/4
-        justify-content: normal
+        grid-row: 2/5
         border-radius: 4rem
         >img
-          margin: 1.3rem
-          width: auto
+          object-fit: cover
+          object-position: top
+          width: 100%
+          height: 100%
           border-radius: 4rem
           box-shadow: 4rem 4rem 10rem rgba(24, 48, 63, 0.5)
+
+
+
+// section de interface e download
+main>section:nth-child(3)
+  height: 65.4rem
+  display: grid
+  grid-template-columns: 8% 1fr 8%
+  @include tinyDesktop
+    grid-template-columns: 4% 1fr 4%
+
+  
+  .contentInterfaceAndDownload
+    grid-column: 2
+    display: flex
+    flex-direction: column 
+    justify-content: center //não irá funcionar pois está sem sua section de cima, a "interface"
+    align-items: center
     
+    >div:first-child
+      display: none
+    >div:last-child
+      height: 50.6rem
+      display: flex
+      
+
+      >div:first-child
+        flex: 1
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+
+        >h3
+          font-size: 3.12rem
+          font-weight: bold
+          text-transform: uppercase
+          line-height: 47.3px
+          color: $black
+        >p
+          font-size: 1.6rem
+          line-height: 24px
+          color: $gray
+ 
+        >figure
+          display: flex
+          align-items: center
+          gap: 1.4rem
+          >img
+            width: 14.9rem
+            height: 4.7rem
+            cursor: pointer
+
+        >div:last-child
+          display: flex
+          gap: 3rem
+          >figure
+            width: 17rem
+            height: 17.6rem
+            background-color: #5851EA
+            border-radius: 1rem
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            gap: 1.8rem
+            color: $white
+            @include tinyDesktop  
+              width: 9.6rem
+              height: 10rem
+              gap: .8rem
+
+            >img
+              width: 3.5rem
+              @include tinyDesktop  
+                width: 1.8rem
+            >p:nth-child(2)
+              font-size: 2.5rem
+              font-weight: 600
+              line-height: auto
+            @include tinyDesktop  
+              font-size: 2rem
+            >p:last-child
+              font-size: 2rem
+              @include tinyDesktop  
+                font-size: 1.6rem
+
+      >figure
+        flex: 1
+        >img
+          width: 100%
+          height: 100%
+          object-fit: contain
+    
+
 
 
 
