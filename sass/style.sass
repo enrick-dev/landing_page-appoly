@@ -313,6 +313,7 @@ main>section:first-child
       display: flex
       flex-direction: column
       align-items: center
+      gap: 1.8rem
       >h3
         font-size: 3.12rem
         font-weight: bold
@@ -378,6 +379,113 @@ main>section:first-child
               color: $gray
               @include smallDesktop
               
+              
+
+// section de App features
+
+main>section:nth-child(2)
+  height: 171rem
+  display: flex
+  align-items: center
+  justify-content: center
+  background-image: url('../assets/imgs/backgrounds/background_header.png')
+  background-size: cover
+  background-position: bottom
+
+  #contentFeatures
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    >div:first-child
+      width: 100%
+      text-align: center
+      display: flex
+      flex-direction: column
+      align-items: center
+      gap: 1.8rem
+      >h3
+        font-size: 3.12rem
+        font-weight: bold
+        text-transform: uppercase
+        line-height: 47.3px
+        color: $white
+      >p
+        width: 60rem
+        font-size: 1.6rem
+        line-height: 24px
+        color: $white
+
+    >div:last-child 
+      display: grid
+      grid-template-columns: 10% 1fr 1fr 1fr 10%
+      grid-template-rows: 23.1rem 23.1rem 23.1rem 23.1rem 23.1rem
+      
+      >figure
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-direction: column
+        gap: 2.2rem
+        >img
+          width: 50px
+        >figcaption
+          display: flex
+          flex-direction: column
+          gap: 1.8rem
+          >h3
+            font-size: 2.5rem
+            font-weight: 600
+            text-transform: uppercase
+            line-height: 37.5px
+            color: $white
+          >p
+            font-size: 1.6rem
+            line-height: 24px
+            color: $white
+
+
+
+      >figure:nth-child(1)
+        grid-column: 3
+        grid-row: 1
+        text-align: center
+      >figure:nth-child(2)
+        grid-column: 2
+        grid-row: 2
+        align-items: flex-end
+        text-align: end
+      >figure:nth-child(3)
+        grid-column: 4
+        grid-row: 2
+        align-items: flex-start
+        text-align: start
+      >figure:nth-child(4)
+        grid-column: 2
+        grid-row: 4
+        align-items: flex-end
+        text-align: end
+      >figure:nth-child(5)
+        grid-column: 4
+        grid-row: 4
+        align-items: flex-start
+        text-align: start
+      >figure:nth-child(6)
+        grid-column: 3
+        grid-row: 6
+      >figure:nth-child(7)
+        grid-column: 3
+        grid-row: 2/4
+        justify-content: normal
+        border-radius: 4rem
+        >img
+          width: auto
+          border-radius: 4rem
+          box-shadow: 4rem 4rem 10rem rgba(24, 48, 63, 0.5)
+    
+
+
+
 
 
 
