@@ -808,3 +808,104 @@ main > section:nth-child(3) .contentInterfaceAndDownload > div:last-child > figu
   height: 100%;
   object-fit: contain;
 }
+
+main > section:nth-child(4) {
+  height: 68.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+@media screen and (max-width: 1015px) {
+  main > section:nth-child(4) {
+    height: 52.3rem;
+  }
+}
+
+main > section:nth-child(4) .contentHowToUse {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+main > section:nth-child(4) .contentHowToUse > div:first-child {
+  width: 100%;
+  height: 47.7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../assets/imgs/backgrounds/background_header.png");
+}
+
+@media screen and (max-width: 1015px) {
+  main > section:nth-child(4) .contentHowToUse > div:first-child {
+    height: 40rem;
+  }
+}
+
+main > section:nth-child(4) .contentHowToUse > div:first-child > div {
+  width: 60.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.3rem;
+  transform: translateY(-6rem);
+  text-align: center;
+}
+
+@media screen and (max-width: 1015px) {
+  main > section:nth-child(4) .contentHowToUse > div:first-child > div {
+    width: 45rem;
+    gap: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 865px) {
+  main > section:nth-child(4) .contentHowToUse > div:first-child > div {
+    width: 90%;
+  }
+}
+
+main > section:nth-child(4) .contentHowToUse > div:first-child > div > h2 {
+  font-size: 3.12rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 47.3px;
+  color: #fff;
+}
+
+main > section:nth-child(4) .contentHowToUse > div:first-child > div > p {
+  font-size: 1.6rem;
+  line-height: 24px;
+  color: #fff;
+}
+
+main > section:nth-child(4) .contentHowToUse > figure {
+  width: 77rem;
+  height: 31.9rem;
+  align-self: center;
+  display: flex;
+  bottom: 0;
+  border-radius: 1rem;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  position: absolute;
+  transform: translateY(5rem);
+}
+
+@media screen and (max-width: 1015px) {
+  main > section:nth-child(4) .contentHowToUse > figure {
+    width: 57rem;
+    height: 23.1rem;
+    transform: translateY(6rem);
+  }
+}
+
+main > section:nth-child(4) .contentHowToUse > figure > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
