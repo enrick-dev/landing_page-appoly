@@ -1,6 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 
+// @mixin toggleImageHeader
+//   @media screen and ( max-width: 1480px )
+//     @content
+@mixin smallDesktop
+  @media screen and ( max-width: 1310px )
+    @content
+@mixin tinyDesktop
+  @media screen and ( max-width: 1015px )
+    @content
+@mixin tablet
+  @media screen and ( max-width: 865px )
+    @content
+@mixin mobile
+  @media screen and ( max-width: 700px )
+    @content
+    
+  
+
+
 $royal-blue: #5956E9
 $black: #232233
 $white: #fff
@@ -19,6 +38,10 @@ body
   background-size: cover
   display: grid
   grid-template-columns: 10% 1fr 10%
+  @include smallDesktop
+    grid-template-columns: 5% 1fr 5%
+  @include mobile
+    min-height: 122.7rem
 
   >header
     grid-column: 2
@@ -26,6 +49,9 @@ body
     display: flex
     flex-direction: column
     gap: 1.5rem
+    @include smallDesktop
+      gap: 3.5rem
+      
 
     .contactNav
       width: 100%
@@ -76,9 +102,18 @@ body
         font-size: 2rem
         font-weight: 600
         text-transform: uppercase
+        @include smallDesktop
+          gap: 1.8rem
+        @include tinyDesktop
+          font-size: 1.6rem
+          gap: 1.1rem
+
         a
           text-decoration: none
           color: $black
+          &:not( ul:last-child>li:last-child>a)::after
+          @include tablet
+            display: none
           &:not( ul:first-child>li:first-child>a, ul:last-child>li:last-child>a)::after
             content: ''
             display: block
@@ -92,6 +127,10 @@ body
       // botão home
       >ul:first-child>li:first-child
         margin-left: 5.2rem
+        @include smallDesktop
+          margin-left: 3.2rem
+        @include tinyDesktop
+          margin-left: 2.2rem
         >a
           color: $royal-blue
           &::after
@@ -123,6 +162,9 @@ body
 
   $margin-conteiner-conteudo-text-top-right-left: 4rem 2.3rem 0rem 3rem
   $margin-conteiner-conteudo-text-right-bottom-left: 0rem 2.3rem 4rem 3rem
+  @include tablet
+    $margin-conteiner-conteudo-text-top-right-left: 1.4rem .7rem 0rem 1.8rem
+    $margin-conteiner-conteudo-text-right-bottom-left: 0rem .7rem 1.4rem 1.8rem
 
   >section
     grid-column: 2/4
@@ -130,6 +172,9 @@ body
     align-items: center
     justify-content: space-between
     position: relative
+    overflow: hidden
+    @include mobile
+      flex-direction: column
     
     .conteudoHeader
       width: 57rem
@@ -141,6 +186,16 @@ body
       border-radius: 1px
       position: relative
       z-index: 10
+      @include smallDesktop
+        width: 51.3rem
+        height: 42rem
+      @include tinyDesktop
+        width: 46.1rem
+        height: 38rem
+      @include tablet
+        width: 35.6rem
+        height: 31.8rem
+
 
 
       >div:first-child
@@ -152,11 +207,21 @@ body
           line-height: 130%
           color: $royal-blue
           margin-bottom: 1.8rem
+          @include smallDesktop
+            font-size: 4rem
+          @include tinyDesktop
+            font-size: 3.5rem
+            margin-bottom: .6rem
+          @include tablet
+            font-size: 3.12rem
+            margin-bottom: .6rem
         >p
           width: 85%
           font-size: 1.6rem
           line-height: 24px
           color: $gray
+          @include tablet
+            width: 100%
 
       >div:last-child
         margin: $margin-conteiner-conteudo-text-right-bottom-left
@@ -167,6 +232,8 @@ body
           text-transform: uppercase
           color: $black
           margin-bottom: .5rem
+          @include tinyDesktop
+            font-size: 2rem
         >figure
           display: flex
           align-items: center
@@ -178,22 +245,45 @@ body
     // borda quadrado envolta do titulo e descrição
     .bordaQuadrada
       width: 57rem
-      height: 100%
+      height: 43.2rem
       position: absolute
       display: flex
       align-items: center
       left: 50px
       z-index: 1
+      @include smallDesktop
+        width: 51.3rem
+        height: 42rem
+      @include tinyDesktop
+        width: 46.1rem
+        height: 38rem
+      @include tablet
+        width: 37.5rem
+        height: 31.8rem
+        left: 16px
+
       >div
-        width: 57rem
-        height: calc( 43.2rem + 100px )
+        width: 100%
+        height: calc( 100% + 100px )
         border: 1.8rem solid #7572FF
         z-index: -1
+        @include smallDesktop
+          height: calc( 100% + 70px )
+        @include tinyDesktop
+          height: calc( 100% + 80px )
+        @include tablet
+          height: calc( 100% + 32px )
   
     >figure
+      height: 100%
       >img
-        width: 64.4rem
-        object-fit: cover
+        width: 100%
+        height: 90%
+        margin-left: 50px
+        object-fit: contain
         object-position: left
+
+
+
 
 
