@@ -609,6 +609,12 @@ main > section:first-child #contentAbout > div:last-child .containerCardsAbout >
   color: #6C6C72;
 }
 
+@media screen and (max-width: 700px) {
+  main > section:first-child #contentAbout > div:last-child .containerCardsAbout > div > div:last-child > p {
+    line-height: normal;
+  }
+}
+
 main > section:nth-child(2) {
   height: 171rem;
   display: flex;
