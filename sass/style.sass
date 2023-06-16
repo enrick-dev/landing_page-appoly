@@ -805,7 +805,9 @@ main>section:nth-child(4)
 
 // section do perfil do time
 main>section:nth-child(5)
-  height: 102.1rem
+  // height: 102.1rem
+  margin: 24rem 0rem
+  margin-bottom: 
   display: grid
   grid-template-columns: 8% 1fr 8%
   @include smallDesktop
@@ -971,6 +973,170 @@ main>section:nth-child(5)
 
 
 
+footer
+  padding-top: 23.5rem
+  background-color: $black
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  color: $white
+  position: relative
+
+
+  .contact
+    width: 80%
+    height: 23rem
+    position: absolute
+    top: -12.8rem
+    background-color: $white
+    border-radius: 3rem
+    box-shadow: 0rem 1rem 10rem rgba(0, 0, 0, 0.24)
+    display: flex
+    justify-content: space-around
+    align-items: center
+    @include mobile
+      flex-direction: column
+      height: 31rem
+
+    >div
+      display: flex
+      align-items: center
+      gap: 1.8rem
+      color: $black
+      @include mobile
+        flex-direction: column
+      >div:first-child
+        width: 6rem
+        height: 6rem
+        display: grid
+        place-items: center
+        background-color: $royal-blue
+        border-radius: 50%
+        >img
+          width: 2.4rem
+      >figcaption
+        font-size: 2.5rem
+        font-weight: 600
+        line-height: 37.5px
+        @include tinyDesktop
+          font-size: 1.6rem
+        @include mobile
+          font-size: 2rem
+    
+
+
+
+  >div:nth-child(2)
+    width: 90%
+    height: 100%
+    display: flex
+    flex-wrap: wrap
+    align-items: flex-end
+    justify-content: space-between
+    padding-bottom: 6.4rem
+    border-bottom: 1px solid $white
+    @include tinyDesktop
+      gap: 6.2rem
+
+    >div:first-child
+      height: 18.3rem
+      display: flex
+      flex-direction: column
+      gap: 3.8rem
+
+      >div:first-child
+        display: flex
+        flex-direction: column
+        >h3
+          font-size: 3.12rem
+          font-weight: bold
+          line-height: 47.3px
+        >p
+          max-width: 33.4rem
+          font-size: 1.6rem
+          line-height: 24px
+          color: $white
+
+      >div:last-child
+        display: flex
+        >figure:first-child
+          padding-right: 3.2rem
+        >figure:not(figure:first-child)
+          padding: 0rem 3.2rem
+          border-left: 1px solid $white
+        >figure>img
+          cursor: pointer
+
+    >ul
+      display: flex
+      flex-direction: column
+      font-size: 1.6rem
+      >li:first-child
+        font-size: 3.12rem
+        font-weight: 600
+        line-height: 37.5px
+        text-transform: uppercase
+        margin-bottom: 1.1rem
+      >li
+        margin-bottom: 1.2rem
+
+
+    >div:last-child
+      display: flex
+      flex-direction: column
+      gap: 3.3rem
+
+      >div
+        display: flex
+        flex-direction: column
+        gap: 1.1rem
+        >h3
+          font-size: 3.12rem
+          font-weight: 600
+          line-height: 37.5px
+          text-transform: uppercase
+        >p
+          max-width: 33.4rem
+          font-size: 1.6rem
+          line-height: 24px
+      >form
+        display: flex
+        align-items: center
+        position: relative
+        >input
+          width: 36.9rem
+          height: 5rem
+          border: none
+          outline: none
+          text-indent: 1.8rem
+          border-radius: .4rem
+          background-color: $white
+          &::placeholder
+            color: $gray
+        >button
+          width: 5.2rem
+          height: 4.6rem
+          right: 2px
+          position: absolute
+          border: none
+          background-color: $royal-blue
+          border-radius: .4rem
+          cursor: pointer
+          &:hover
+            background-color: #6663e2
+
+
+.copyright
+  margin: 1.8rem 0rem 
+  font-size: 1.6rem
+  line-height: 24px
+      
+
+
+
+
+    
           
   
 
